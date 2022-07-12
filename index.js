@@ -1,13 +1,17 @@
 const express = require('express')
+const morgan = require('morgan')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-  var a = 1;
-  var b = 2;
 
-  var c = a + b;
+app.use(morgan('combined'))
+
+
+app.get('/', (req, res) => {
+  return res.send(`
+  <h1> Hello World!<h1>
+  `)
+  
 })
 
 //127.0.0.1 -> localhost
