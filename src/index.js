@@ -7,11 +7,11 @@ const port = 3000;
 
 const route = require('./routes');
 
-                    app.use(express.static(path.join(__dirname, 'public')));
-                    app.use(
-                        express.urlencoded({
-                            extended: true,
-                        }),
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(
+    express.urlencoded({
+        extended: true,
+    }),
 );
 
 app.use(express.json());
@@ -20,10 +20,10 @@ app.use(express.json());
 
 // teplate engine
 app.engine(
-'.hbs',
-hds.engine({
-extname: '.hbs',
-}),
+    '.hbs',
+    hds.engine({
+        extname: '.hbs',
+    }),
 );
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
