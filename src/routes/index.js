@@ -5,6 +5,6 @@ function route(app) {
     app.use('/news', newsRouter);
 
     app.use('/', siteRouter);
-}npx husky-init && npm install
+}
 
 module.exports = route;
